@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "processhub": {
+      "type": "http",
+      "url": "https://processhub.kz/mcp",
+      "oauth": {
+        "clientId": "processhub-codex",
+        "callbackUrl": "http://127.0.0.1/callback"
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "processhub",
+  "version": "0.1.0",
+  "description": "Read project and task context, plan work, and propose results for approval in ProcessHub.",
+  "author": {
+    "name": "ИП Pragma",
+    "email": "hello@prgm.kz",
+    "url": "https://processhub.kz"
+  },
+  "homepage": "https://processhub.kz/welcome",
+  "repository": "https://github.com/id-jony/processhub-plugins",
+  "license": "MIT",
+  "keywords": [
+    "processhub",
+    "projects",
+    "tasks",
+    "mcp",
+    "productivity"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json"
+}

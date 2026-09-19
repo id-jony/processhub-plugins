@@ -1,0 +1,44 @@
+{
+  "name": "processhub",
+  "version": "0.1.0",
+  "description": "Read project and task context, plan work, and propose results for approval in ProcessHub.",
+  "author": {
+    "name": "ИП Pragma",
+    "email": "hello@prgm.kz",
+    "url": "https://processhub.kz"
+  },
+  "homepage": "https://processhub.kz/welcome",
+  "repository": "https://github.com/id-jony/processhub-plugins",
+  "license": "MIT",
+  "keywords": [
+    "processhub",
+    "projects",
+    "tasks",
+    "mcp",
+    "productivity"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "ProcessHub",
+    "shortDescription": "Projects, tasks and approved work reports.",
+    "longDescription": "Connect selected ProcessHub projects to your assistant. Understand tasks, prepare implementation plans, and propose a work report. Each report requires confirmation in ProcessHub before becoming a task comment.",
+    "developerName": "ИП Pragma",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://processhub.kz/welcome",
+    "privacyPolicyURL": "https://processhub.kz/privacy",
+    "termsOfServiceURL": "https://processhub.kz/terms",
+    "defaultPrompt": [
+      "Summarize a task from my ProcessHub project.",
+      "Plan the implementation of a ProcessHub task.",
+      "Propose a work report for approval in ProcessHub."
+    ],
+    "brandColor": "#6366F1",
+    "composerIcon": "./assets/icon.png",
+    "logo": "./assets/icon.png"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "ProcessHub",
+  "publisher": "ИП Pragma",
+  "supportEmail": "hello@prgm.kz",
+  "website": "https://processhub.kz/welcome",
+  "privacyPolicy": "https://processhub.kz/privacy",
+  "termsOfService": "https://processhub.kz/terms",
+  "repository": "https://github.com/id-jony/processhub-plugins",
+  "mcpUrl": "https://processhub.kz/mcp",
+  "category": "Productivity",
+  "shortDescription": "Projects, tasks and approved work reports.",
+  "description": "Connect selected ProcessHub projects to your assistant. Understand tasks, prepare implementation plans, and propose a work report. Each report requires confirmation in ProcessHub before becoming a task comment.",
+  "starterPrompts": [
+    "Summarize a task from my ProcessHub project.",
+    "Plan the implementation of a ProcessHub task.",
+    "Propose a work report for approval in ProcessHub."
+  ],
+  "auth": {
+    "type": "OAuth 2.0 Authorization Code with PKCE",
+    "publicClients": {
+      "codex": "processhub-codex",
+      "claudeWeb": "processhub-claude",
+      "claudeCode": "processhub-claude-code"
+    },
+    "dynamicClientRegistration": false
+  },
+  "submissionStatus": "not_submitted"
+}

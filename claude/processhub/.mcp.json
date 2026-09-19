@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "processhub": {
+      "type": "http",
+      "url": "https://processhub.kz/mcp",
+      "oauth": {
+        "clientId": "processhub-claude-code",
+        "callbackPort": 39847
+      }
+    }
+  }
+}

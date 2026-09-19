@@ -1,0 +1,30 @@
+{
+  "name": "processhub",
+  "owner": {
+    "name": "ИП Pragma",
+    "email": "hello@prgm.kz"
+  },
+  "metadata": {
+    "description": "ProcessHub project and task workflows"
+  },
+  "plugins": [
+    {
+      "name": "processhub",
+      "source": "./claude/processhub",
+      "description": "Read project and task context, plan work, and propose results for approval in ProcessHub.",
+      "version": "0.1.0",
+      "author": {
+        "name": "ИП Pragma",
+        "email": "hello@prgm.kz",
+        "url": "https://processhub.kz"
+      },
+      "license": "MIT",
+      "category": "productivity",
+      "tags": [
+        "tasks",
+        "projects",
+        "mcp"
+      ]
+    }
+  ]
+}
