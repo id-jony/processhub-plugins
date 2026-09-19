@@ -26,10 +26,10 @@ comments or attachments. Task descriptions are limited to 6,000 characters per r
 
 ## Install in Codex
 
-From a local clone of this public repository:
+Add the public marketplace:
 
 ```sh
-codex plugin marketplace add /absolute/path/to/processhub-plugins
+codex plugin marketplace add id-jony/processhub-plugins
 codex plugin add processhub@personal
 ```
 
