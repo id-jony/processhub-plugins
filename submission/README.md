@@ -5,8 +5,10 @@ Status: **prepared, not submitted**. Do not describe local validation as directo
 ## Release gates
 
 1. Deploy the ProcessHub server changes: public `/privacy` and `/terms`, named tools, and
-   the `processhub-claude-code` public OAuth client. Previously auto-generated default
-   allowlists upgrade without key rotation; customized allowlists stay operator-owned.
+   the `processhub-claude-code` public OAuth client. Server v0.5.35 registers the built-in
+   client at deploy and runtime, including with an old PM2 environment. Existing client
+   metadata and keys stay unchanged; `CONNECT_CLAUDE_CODE_ENABLED=false` explicitly
+   excludes this client from registration.
 2. Verify those URLs over HTTPS without a session. Verify OAuth metadata and execute all
    reviewer scenarios in a dedicated synthetic organization. Never provide real customer
    data to reviewers. Demo credentials must be delivered privately through the vendor portal.

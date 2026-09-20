@@ -29,7 +29,9 @@ connection UI or contact support. Official directory onboarding is a separate re
   not supported by this integration.
 - Expired request: start a fresh connection from the AI client, not an old browser URL.
 - Claude Code callback failure: ensure port 39847 is free and the server release includes
-  the `processhub-claude-code` client. Custom server allowlists need an operator update.
+  the `processhub-claude-code` client (server v0.5.35 or later). It is registered automatically,
+  including with older deployment settings. An operator can explicitly disable registration
+  with `CONNECT_CLAUDE_CODE_ENABLED=false`.
 - Report awaiting approval: use the link shown in chat, review the exact text, and decide
   inside ProcessHub. The AI must never approve the report for you.
 

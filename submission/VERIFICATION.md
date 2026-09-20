@@ -28,3 +28,11 @@
 
 This record does not claim a vendor listing is approved or that unexecuted end-to-end
 scenarios passed. No production credentials or customer fixtures are included.
+
+## Registration regression - 2026-09-20
+
+Server v0.5.35 passed 28 focused tests, including HTTP authorization with an old
+allowlist and both native callback hosts, custom metadata preservation, unchanged
+persistent keys and explicit disable. The production authorization probe still needs
+to be repeated after this server release deploys. Full user OAuth and report approval
+remain separate from this unauthenticated authorization-start check.
