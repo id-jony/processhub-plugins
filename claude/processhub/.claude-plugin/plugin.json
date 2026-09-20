@@ -1,6 +1,6 @@
 {
   "name": "processhub",
-  "version": "0.1.0",
+  "version": "0.1.0+codex.20260920152648",
   "description": "Read project and task context, plan work, and propose results for approval in ProcessHub.",
   "author": {
     "name": "ИП Pragma",

@@ -1,9 +1,9 @@
 {
   "name": "processhub",
-  "version": "0.1.0",
+  "version": "0.1.0+codex.20260920152648",
   "description": "Read project and task context, plan work, and propose results for approval in ProcessHub.",
   "author": {
-    "name": "ИП Pragma",
+    "name": "\u0418\u041f Pragma",
     "email": "hello@prgm.kz",
     "url": "https://processhub.kz"
   },
@@ -23,7 +23,7 @@
     "displayName": "ProcessHub",
     "shortDescription": "Projects, tasks and approved work reports.",
     "longDescription": "Connect selected ProcessHub projects to your assistant. Understand tasks, prepare implementation plans, and propose a work report. Each report requires confirmation in ProcessHub before becoming a task comment.",
-    "developerName": "ИП Pragma",
+    "developerName": "\u0418\u041f Pragma",
     "category": "Productivity",
     "capabilities": [
       "Read",

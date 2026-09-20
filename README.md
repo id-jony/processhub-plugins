@@ -9,7 +9,7 @@ separate steps: this repository alone does not mean an official listing is appro
 
 ## What you can do
 
-- **Task brief** — understand a task, its requirements and missing information.
+- **Task brief / my work** — find my tasks, overdue work and deadlines across permitted projects; read relevant discussion, specifications and files with explicit consent.
 - **Implementation plan** — turn a task into steps and verification criteria.
 - **Work report** — propose a report; publish it only after confirmation in ProcessHub.
 
@@ -22,7 +22,7 @@ Examples (Russian and English work):
 > Предложи отчёт о выполненной работе для подтверждения в ProcessHub.
 
 The integration does not create/delete tasks or change their status. It does not read
-comments or attachments. Task descriptions are limited to 6,000 characters per response.
+context without explicit consent. Reconnect to grant `tasks:context:read` for discussion, specifications and attachments. Text is paginated; supported files are limited to 10 MB and image-only PDFs are not OCRed. Requires ProcessHub server v0.5.36 or later; older servers remain usable for basic reads.
 
 ## Install in Codex
 

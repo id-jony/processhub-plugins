@@ -38,3 +38,12 @@ and Codex each returned HTTP 303 to the ProcessHub consent page; invalid_client
 was absent. Public legal pages were verified without a session on 2026-09-19.
 Full user OAuth and report approval remain separate from this unauthenticated
 authorization-start check and have not been newly claimed as completed.
+
+## Context tools - 2026-09-20
+
+Local server regression: 142 Connect tests passed, including cross-project filters,
+canonical and legacy assignments, timezone-aware deadline bounds, text/comment paging,
+related-task scope, context consent and revocation during file extraction. Existing
+grants do not gain tasks:context:read automatically. The consent UI was inspected
+in the local browser with synthetic fixtures. Full installed-plugin OAuth and human
+report approval remain unverified; these tests do not imply marketplace approval.

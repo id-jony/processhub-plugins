@@ -9,7 +9,7 @@ Return to the AI application when authorization completes. A plain local callbac
 belongs to that AI client and cannot be styled by the ProcessHub plugin.
 
 Start with: “Check my ProcessHub connection and list the projects I allowed.”
-Reports require write permission and a separate approval inside ProcessHub.
+For my work, ask for your tasks or overdue deadlines across permitted projects. Context tools require a new explicit consent including `tasks:context:read`; existing grants never gain discussion/file access automatically. Reports require write permission and a separate approval inside ProcessHub.
 
 ## Claude web / Desktop connector
 

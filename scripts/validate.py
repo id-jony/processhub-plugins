@@ -18,7 +18,8 @@ claude = ROOT / 'claude/processhub'
 cm = read('plugins/processhub/.codex-plugin/plugin.json')
 am = read('claude/processhub/.claude-plugin/plugin.json')
 assert cm['name'] == am['name'] == 'processhub'
-assert cm['version'] == am['version'] == '0.1.0'
+assert cm['version'] == am['version']
+assert cm['version'].split('+')[0] == '0.1.0'
 assert cm['author']['email'] == am['author']['email'] == 'hello@prgm.kz'
 assert cm['interface']['privacyPolicyURL'] == 'https://processhub.kz/privacy'
 assert cm['interface']['termsOfServiceURL'] == 'https://processhub.kz/terms'
