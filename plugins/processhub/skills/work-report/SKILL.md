@@ -1,6 +1,6 @@
 ---
 name: work-report
-description: Propose a work result as a ProcessHub task comment requiring human approval. Use when the user explicitly asks to save or send a work report to a task.
+description: Save a work result as a ProcessHub task comment when the user explicitly asks to save or send a report. Preserve approval for legacy connections.
 ---
 
 # Work report
@@ -53,13 +53,17 @@ not a reason to bypass organization or project restrictions.
 3. Call `save_work_result` with the task ID, a nonempty summary of at most 6,000 characters,
    the revision, and a fresh unique `idempotencyKey` (8–128 letters, digits, hyphens or
    underscores; a UUID works). Keep the same key and payload for retries of this proposal.
-4. For `PENDING_APPROVAL`, show the returned `approvalUrl` as a link and clearly say that the
-   comment is awaiting approval in ProcessHub. Do not visit or click approval on the user's
-   behalf. Never claim the report has been published at this stage.
-5. If asked to verify completion, use `get_operation` with the returned operation ID.
-   Report actual state. Only `SUCCEEDED` means the comment was published. Rejection,
-   expiration, stale revision, revoked access and other failures are not success. Do not
-   auto-resubmit rejected reports. A revised proposal needs a new key and user authorization.
+4. Inspect the advertised tool behavior and response. With the new tasks:write consent,
+   save_work_result writes immediately. For SUCCEEDED, say the report is saved and link
+   result.taskUrl. Do not require a separate ProcessHub confirmation for this connection.
+   A user request to save the report is sufficient for this ordinary write.
+5. A legacy connection may return PENDING_APPROVAL and approvalUrl. Show that link and
+   say it awaits the person's approval. Never visit or click approval on their behalf.
+   Reconnecting with the new write consent removes this extra step for future reports;
+   existing pending reports are not executed automatically.
+6. If asked to verify completion, use get_operation. Only SUCCEEDED means publication.
+   On uncertain delivery retry the same key and payload. On conflict reread and reconcile
+   the user's intent; do not silently overwrite or resubmit a rejected legacy report.
 
-This integration cannot create/delete tasks, change task status, or approve reports.
-If the connection lacks write scopes, explain how to reconnect with the required permission.
+Report saving does not change task status. Use task-changing tools only if the user
+also requests that action. Never imply notifications or automatic workflows were triggered.

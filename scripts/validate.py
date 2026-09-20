@@ -40,7 +40,7 @@ for root, manifest, client in [(codex, cm, 'processhub-codex'), (claude, am, 'pr
         assert server['oauth']['callbackPort'] == 39847
     assert contained(root, manifest['skills']).is_dir()
     assert not (root / 'hooks').exists() and not (root / 'scripts').exists()
-for name in ['task-brief', 'implementation-plan', 'work-report']:
+for name in ['task-brief', 'implementation-plan', 'work-report', 'task-changes']:
     path = Path('skills') / name / 'SKILL.md'
     assert (codex / path).read_bytes() == (claude / path).read_bytes(), path
     text = (codex / path).read_text()
@@ -60,9 +60,9 @@ assert entry['policy'] == {'installation':'AVAILABLE','authentication':'ON_INSTA
 assert entry['category'] == 'Productivity'
 assert read('.claude-plugin/marketplace.json')['plugins'][0]['source'] == './claude/processhub'
 cases = read('submission/test-cases.json')
-assert len({c['id'] for c in cases}) == 8
-assert sum(c['kind'] == 'positive' for c in cases) == 5
-assert sum(c['kind'] == 'negative' for c in cases) == 3
+assert len({c['id'] for c in cases}) == 12
+assert sum(c['kind'] == 'positive' for c in cases) == 7
+assert sum(c['kind'] == 'negative' for c in cases) == 5
 allowed = {'.agents','.claude-plugin','.github','.git','.gitignore','plugins','claude','scripts','submission','README.md','SETUP.md','LICENSE'}
 assert not {p.name for p in ROOT.iterdir()} - allowed
 for path in ROOT.rglob('*'):
@@ -70,4 +70,4 @@ for path in ROOT.rglob('*'):
         continue
     assert not path.is_symlink(), path
     assert not path.name.startswith('.env') and path.suffix not in {'.pem','.key','.sqlite'}, path
-print('PASS: both packages, MCP configuration, three mirrored skills, assets, marketplaces and eight reviewer scenarios')
+print('PASS: both packages, MCP configuration, four mirrored skills, assets, marketplaces and twelve reviewer scenarios')

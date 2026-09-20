@@ -1,7 +1,7 @@
 {
   "name": "processhub",
-  "version": "0.1.0+codex.20260920152648",
-  "description": "Read project and task context, plan work, and propose results for approval in ProcessHub.",
+  "version": "0.1.0+codex.20260920162019",
+  "description": "Read ProcessHub context, create and update tasks, and save work results directly from chat.",
   "author": {
     "name": "ИП Pragma",
     "email": "hello@prgm.kz",

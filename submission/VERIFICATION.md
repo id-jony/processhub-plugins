@@ -47,3 +47,11 @@ related-task scope, context consent and revocation during file extraction. Exist
 grants do not gain tasks:context:read automatically. The consent UI was inspected
 in the local browser with synthetic fixtures. Full installed-plugin OAuth and human
 report approval remain unverified; these tests do not imply marketplace approval.
+
+## Direct writes (server v0.5.37)
+
+The new write-consent profile executes tasks and reports directly, with no ProcessHub
+approval hop. Legacy report grants retain their original approval semantics. Packages
+now include task-changes; installed-client OAuth and human review scenarios must be
+rerun against this release before marketplace submission. Repository validators and
+local synthetic tests do not certify a full Codex/Claude client session.

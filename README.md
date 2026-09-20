@@ -11,7 +11,8 @@ separate steps: this repository alone does not mean an official listing is appro
 
 - **Task brief / my work** — find my tasks, overdue work and deadlines across permitted projects; read relevant discussion, specifications and files with explicit consent.
 - **Implementation plan** — turn a task into steps and verification criteria.
-- **Work report** — propose a report; publish it only after confirmation in ProcessHub.
+- **Task changes** — create tasks and update status, people, priority and deadlines directly from chat.
+- **Work report** — save a result as a task comment.
 
 Examples (Russian and English work):
 
@@ -21,8 +22,15 @@ Examples (Russian and English work):
 >
 > Предложи отчёт о выполненной работе для подтверждения в ProcessHub.
 
-The integration does not create/delete tasks or change their status. It does not read
-context without explicit consent. Reconnect to grant `tasks:context:read` for discussion, specifications and attachments. Text is paginated; supported files are limited to 10 MB and image-only PDFs are not OCRed. Requires ProcessHub server v0.5.36 or later; older servers remain usable for basic reads.
+Reconnect once to grant the new read-and-write consent (tasks:write). Task and report
+writes then execute directly from chat and return a task link, without a separate
+ProcessHub approval step. The server checks current rights, prevents duplicate writes
+and keeps history. Older grants retain their original report approval behavior.
+
+Discussion, specifications and files require tasks:context:read. Text is paginated;
+files are limited to 10 MB and image-only PDFs are not OCRed. Direct task writes require
+server v0.5.37 or later. No deletion, project move or AI-employee assignment is exposed.
+Notifications and automatic workflows are not triggered by these external writes.
 
 ## Install in Codex
 
@@ -69,7 +77,7 @@ copies already held by that provider. See [Privacy](https://processhub.kz/privac
 - `python3 scripts/validate.py` checks packages, mirrored skills and release boundaries.
 - `claude plugin validate --strict claude/processhub` validates the Claude package.
 - [Submission checklist](submission/README.md) records release and review requirements.
-- [Reviewer scenarios](submission/test-cases.json) includes five positive and three negative cases.
+- [Reviewer scenarios](submission/test-cases.json) includes seven positive and five negative cases.
 
 No credentials, private customer fixtures or application source belong in this repository.
 MIT-licensed plugin files; hosted service usage is governed by its terms.
