@@ -23,7 +23,6 @@
 - Execute all eight reviewer scenarios with synthetic fixtures and record results.
 - Claude web connector and Cowork are separate targets; Claude CLI installation does not
   establish their OAuth compatibility. The owner will test Claude authorization.
-- Verify public legal URLs and the new Claude Code client after the application deploy.
 - Publisher/legal review, domain verification, private reviewer access and portal submission.
 
 This record does not claim a vendor listing is approved or that unexecuted end-to-end
@@ -33,6 +32,9 @@ scenarios passed. No production credentials or customer fixtures are included.
 
 Server v0.5.35 passed 28 focused tests, including HTTP authorization with an old
 allowlist and both native callback hosts, custom metadata preservation, unchanged
-persistent keys and explicit disable. The production authorization probe still needs
-to be repeated after this server release deploys. Full user OAuth and report approval
-remain separate from this unauthenticated authorization-start check.
+persistent keys and explicit disable. Production health confirmed v0.5.35 on
+2026-09-20. Authorization-start probes for Claude Code (localhost and 127.0.0.1)
+and Codex each returned HTTP 303 to the ProcessHub consent page; invalid_client
+was absent. Public legal pages were verified without a session on 2026-09-19.
+Full user OAuth and report approval remain separate from this unauthenticated
+authorization-start check and have not been newly claimed as completed.
